@@ -10,16 +10,14 @@
     
     <title>Lab 09</title>
 </head>
-<body>
-    
+<body>    
     <button type="button" onclick="loadDoc()">Get JSON from a file</button>
-    <button type="button" onclick="loadM()">Marvel</button>
     <br><br>
 
 
-    <label for="supers">Choose a filter:</label>
+    <label for="supers">Choose a Publisher:</label>
 
-    <select name="supers" id="supers">
+    <select id="supers" onchange="selectPublisher(this)">
         <option value="all">All</option>
         <option value="marvel">Marvel</option>
         <option value="dc">DC</option>    
@@ -27,7 +25,7 @@
 
 
     <table id="demo"></table>
-
-    <script src="./script.js"></script>
+    
+<script src="./script.js"></script>
 </body>
 </html>

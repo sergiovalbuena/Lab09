@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    
+    <title>Lab 09</title>
+</head>
+<body>
+    
+    <button type="button" onclick="loadDoc()">Get JSON from a file</button>
+    <button type="button" onclick="loadM()">Marvel</button>
+    <br><br>
+
+
+    <label for="supers">Choose a filter:</label>
+
+    <select name="supers" id="supers">
+        <option value="all">All</option>
+        <option value="marvel">Marvel</option>
+        <option value="dc">DC</option>    
+    </select>
+
+
+    <table id="demo"></table>
+
+    <script src="./script.js"></script>
+</body>
+</html>

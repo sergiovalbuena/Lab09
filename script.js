@@ -44,36 +44,22 @@ function loadDoc(){
                 const characters = data[i].characters;
             
                 document.getElementById("demo").innerHTML += 
-                `
-                <tr>
+                `<tr>
                     <td>${superhero} </td>
                     <td>${publisher}</td>
                     <td>${alterEgo}</td>
                     <td>${firstAppearance}</td>
                     <td>${characters}</td>
                 </tr>
-                `;
-
-                if(publisher === 'Marvel Comics'){
-                    console.log('AFGDDAS');
-                }else if(publisher === 'DC Comics'){
-                    console.log('aefaefaf');
-                }else{
-                    console.log('no publisher found');
-                }                
+                `;          
             }
 
         } catch(error){
             console.error(error)
         }
     }
-
-
-
-    //console.log('Before');
+    //call the function to print it
     anotherFunction(API);
-    //console.log('After');
-
 }
 function loadM(){
     document.getElementById("demo").innerHTML = `
@@ -85,7 +71,6 @@ function loadM(){
     <th>Characters</th>
     </tr>
     `;
-
 
     const anotherFunction = async (url_api) => {
         try {
@@ -110,10 +95,6 @@ function loadM(){
                         <td>${characters}</td>
                     </tr>
                     `;  
-            }else if(publisher === 'DC Comics'){
-                console.log('aefaefaf');
-            }else{
-                console.log('no publisher found');
             }
         }
         } catch(error){
@@ -158,10 +139,6 @@ function loadD(){
                         <td>${characters}</td>
                     </tr>
                     `;  
-            }else if(publisher === 'DC Comics'){
-                console.log('aefaefaf');
-            }else{
-                console.log('no publisher found');
             }
         }
         } catch(error){
@@ -172,7 +149,6 @@ function loadD(){
 
 }
 
-
 function selectPublisher(element){
     const publisherOption = element.options[element.selectedIndex].value;
     if (publisherOption === 'all') {
@@ -181,8 +157,30 @@ function selectPublisher(element){
         loadM()
     }else if (publisherOption === 'dc') {
         loadD()
+    }else{
+        document.getElementById("demo").innerHTML = `
+        <tr>
+        <th>Superhero</th>
+        <th>Publisher</th>
+        <th>Alter Ego</th>
+        <th>First Appearance</th>
+        <th>Characters</th>
+        </tr>
+        `
     }
+
 }
+
+$("table").css({
+     "width": "100%",
+    "text-align": "center",
+    "border": "2px solid",
+    "border-collapse": "collapse",
+});
+
+
+
+
 
 
 

@@ -11,18 +11,17 @@
     <title>Lab 09</title>
 </head>
 <body>    
-    <button type="button" onclick="loadDoc()">Get JSON from a file</button>
-    <br><br>
-
-
+   
+    <br>
     <label for="supers">Choose a Publisher:</label>
-
     <select id="supers" onchange="selectPublisher(this)">
-        <option value="all">All</option>
-        <option value="marvel">Marvel</option>
-        <option value="dc">DC</option>    
+        <option value="">Select...</option>
+        <option value="all">Show All Superheros 🦸🏻‍♀️🦸🏼‍♂️</option>
+        <option value="marvel">Show Marvel Superheros</option>
+        <option value="dc">Show DC Superheros</option>    
     </select>
-
+    
+    <br><br>
 
     <table id="demo"></table>
     
